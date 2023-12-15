@@ -8,6 +8,7 @@ from llama_index.schema import (
     NodeRelationship,
     RelatedNodeInfo,
     TextNode,
+    CopilotTextNode,
 )
 
 
@@ -36,6 +37,8 @@ def json_to_doc(doc_dict: dict) -> BaseNode:
             doc = ImageNode.parse_obj(data_dict)
         elif doc_type == IndexNode.get_type():
             doc = IndexNode.parse_obj(data_dict)
+        elif doc_type == CopilotTextNode.get_type():
+            doc = CopilotTextNode.parse_obj(data_dict)
         else:
             raise ValueError(f"Unknown doc type: {doc_type}")
 

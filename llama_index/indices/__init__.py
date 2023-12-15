@@ -40,6 +40,7 @@ from llama_index.indices.struct_store.sql import (
 )
 from llama_index.indices.tree.base import GPTTreeIndex, TreeIndex
 from llama_index.indices.vector_store import GPTVectorStoreIndex, VectorStoreIndex
+from llama_index.indices.CopilotIndex import CopilotIndex
 
 __all__ = [
     "load_graph_from_storage",
@@ -72,4 +73,5 @@ __all__ = [
     "GPTVectorStoreIndex",
     "GPTSQLStructStoreIndex",
     "GPTEmptyIndex",
+    "CopilotIndex",
 ]

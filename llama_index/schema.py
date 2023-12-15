@@ -156,6 +156,7 @@ class ObjectType(str, Enum):
     IMAGE = auto()
     INDEX = auto()
     DOCUMENT = auto()
+    COPILOTTEXT = auto()
 
 
 class MetadataMode(str, Enum):
@@ -448,6 +449,29 @@ class TextNode(BaseNode):
 
 # TODO: legacy backport of old Node class
 Node = TextNode
+
+class CopilotTextNode(TextNode):
+    """Textnode with additional information for Copilot."""
+    
+    data: Dict[str, str] = None
+    key: str = None
+    value: str = None
+    
+    @classmethod
+    def class_name(cls) -> str:
+        return "CopilotTextNode"
+    
+    @classmethod
+    def get_type(cls) -> str:
+        """Get Object type."""
+        return ObjectType.COPILOTTEXT
+    
+    def get_content(self, metadata_mode: MetadataMode = MetadataMode.NONE) -> str:
+        """Get object content."""
+        return self.key
+    
+    def set_content(self, value: str) -> None:
+        self.key = value
 
 
 class ImageNode(TextNode):

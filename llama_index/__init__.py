@@ -37,6 +37,7 @@ from llama_index.indices import (
     SummaryIndex,
     TreeIndex,
     VectorStoreIndex,
+    CopilotIndex,
     load_graph_from_storage,
     load_index_from_storage,
     load_indices_from_storage,
@@ -95,6 +96,7 @@ __all__ = [
     # indices
     "SummaryIndex",
     "VectorStoreIndex",
+    CopilotIndex,
     "SimpleKeywordTableIndex",
     "KeywordTableIndex",
     "RAKEKeywordTableIndex",
