@@ -18,13 +18,13 @@ ignore_missing_imports = true
 python_version = "3.8"
 
 [tool.poetry]
-authors = ["Jerry Liu <jerry@llamaindex.ai>"]
+authors = ["jrsu <sjr959@gmai.com>"]
 classifiers = [
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
     "Topic :: Software Development :: Libraries :: Application Frameworks",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-description = "Interface between LLMs and your data"
+description = "Custom indexing solution developed for our private project, based on the original repository hosted at https://github.com/run-llama/llama_index, authored by Jerry Liu <jerry@llamaindex.ai>."
 documentation = "https://docs.llamaindex.ai/en/stable/"
 homepage = "https://llamaindex.ai"
 keywords = ["LLM", "NLP", "RAG", "data", "devtools", "index", "retrieval"]
@@ -37,11 +37,11 @@ maintainers = [
     "Simon Suo <simon@llamaindex.ai>",
     "Sourabh Desai <sourabh@llamaindex.ai>",
 ]
-name = "llama-index"
+name = "copilot-index"
 packages = [{include = "llama_index"}]
 readme = "README.md"
-repository = "https://github.com/run-llama/llama_index"
-version = "0.9.15"
+repository = "https://github.com/jingrsu/llama_index"
+version = "0.1.0"
 
 [tool.poetry.dependencies]
 SQLAlchemy = {extras = ["asyncio"], version = ">=1.4.49"}
